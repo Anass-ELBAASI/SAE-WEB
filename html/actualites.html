@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>actualites</title>
-    <link rel="stylesheet" href="actualites.css">
-    <script src="actualites.js"></script>
+    <title>Actualités</title>
+    <link rel="stylesheet" href="../css/actualites.css">
+    <script src="../js/actualites.js"></script>
 </head>
 <body>
-    <h1 class="image"></h1>
-    <div class="grosseImage">
-
+<!-- Bannière avec une grande image -->
+<header>
+    <div class="header-content">
+        <img src="../image/cure-thermal.jpg" alt="Cure thermal" class="large-banner">
     </div>
+</header>
+<!-- Titre principal des actualités -->
+<main>
+    <h1>Nos dernières actualités</h1>
+
+    <!-- Section des filtres -->
+    <div class="filters">
+        <button>Filtrer par thématique</button>
+        <button>Filtrer par profil</button>
+    </div>
+
+    <!-- Grille d'actualités -->
+    <section class="actualites-grid">
+        <div class="box">
+            <p>Covid-19</p>
+            <p>Thermalisme</p>
+            <img src="../image/cure-covid.webp" alt="Cure covid">
+        </div>
+        <div class="box">
+            <p>Été 2019</p>
+            <p>Venez nous rencontrer</p>
+            <img src="../image/imageRecontre.png" alt="Rencontre">
+        </div>
+        <div class="box">
+            <p>Communiqué n° 1/2019</p>
+            <p>du 10 janvier</p>
+            <img src="../image/communique_1.png" alt="Communiqué 1">
+        </div>
+        <div class="box">
+            <p>Communiqué n° 6/2019</p>
+            <p>du 6 octobre</p>
+            <img src="../image/communicationShema.png" alt="Communication Schéma">
+        </div>
+        <div class="box">
+            <p>Résultats et conséquences</p>
+            <p>Conseil d'État</p>
+            <img src="../image/conseilEtat.png" alt="Conseil d'État">
+        </div>
+        <div class="box">
+            <p>La FFCM a saisi le</p>
+            <p>Conseil d'État</p>
+            <img src="../image/conseilEtat2.png" alt="Conseil d'État 2">
+        </div>
+        <div class="box">
+            <p>Mont-Dore (63)</p>
+            <p>6ème Congrès National</p>
+            <img src="../image/congretNational.jpg" alt="Congrès National">
+        </div>
+        <div class="box">
+            <p>Lettre ouverte de</p>
+            <p>France Assos santé</p>
+            <img src="../image/LettreOuverte.jpg" alt="Lettre ouverte">
+        </div>
+        <div class="box">
+            <p>Réunion - 4 mai</p>
+            <img src="../image/invitation.png" alt="Invitation Réunion">
+        </div>
+        <div class="box">
+            <p>Colloque européen</p>
+            <img src="../image/collocation.png" alt="Colloque Européen">
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="#">Page précédente</a>
+        <span>1 ... 2 ... 3 ... 4</span>
+        <a href="#">Page suivante</a>
+    </div>
+</main>
 </body>
 </html>
