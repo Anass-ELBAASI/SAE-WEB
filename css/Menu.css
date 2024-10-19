@@ -1,0 +1,73 @@
+html {
+    background-color:#c0b4c4;
+    cursor:crosshair;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* page 1 HEADER */
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #756B8C  ;
+    color: white;
+
+}
+
+header h1 {
+    display: flex;
+    position: absolute;
+    margin: 20px;
+    font-size: 25px;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 10px;
+}
+
+header nav{
+    vertical-align: top;
+    display:flex;
+    height:100%;
+    justify-content: space-evenly;
+}
+
+header nav ul {
+    display: flex;
+    height: 100%;
+}
+
+header nav ul li {
+    display: flex;
+}
+
+header nav ul li a {
+    display: block;
+    height: 100%;
+    width: 200px;
+    line-height: 70px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: white;
+    color : #756B8C;
+}
+
+.sec-header {
+    scroll-snap-align: start ;
+}
+
