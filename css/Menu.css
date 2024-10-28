@@ -76,11 +76,11 @@ header nav ul li a:hover {
 /* IMAGE */
 
 .image-dessous-navbar {
-    background-size: cover; /* Étire l'image pour couvrir tout l'élément */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    width: 100%; /* Étend l'élément sur toute la largeur */
-    height: 500px; /* Ajustez la hauteur en fonction de votre besoin */
+    width: 1920px;
+    height: 600px;
+    object-fit: cover; /* Keeps the aspect ratio */
+    background-size: cover; /* Ensures the image covers the whole width */
+    background-position: center;
 }
 
 /* CARROUSSEL */
@@ -135,7 +135,6 @@ header nav ul li a:hover {
 
 /* SECTIONS ACTUALITES */
 
-/* Actualités Section */
 .actualites-section {
     text-align: center;
     padding: 40px 20px;
@@ -143,15 +142,17 @@ header nav ul li a:hover {
 }
 
 .actualites-section h2 {
-    font-size: 24px;
+    font-size: 1.5em;
     margin-bottom: 20px;
-    color: #756B8C;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .actualites-section p {
-    font-size: 16px;
+    font-size: 1.25em;
     margin-bottom: 40px;
-    color: #756B8C;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .actualites {
@@ -167,8 +168,8 @@ header nav ul li a:hover {
 }
 
 .actualite img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 120px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -177,4 +178,64 @@ header nav ul li a:hover {
     margin-top: 10px;
     font-size: 18px;
     color: #333;
+}
+
+/* partenaires */
+
+.logo-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.logo-item img {
+    width: 65%; /* Ajustez en fonction de la taille souhaitée du logo dans le carré SVG */
+    height: auto;
+    position: relative;
+    z-index: 1; /* Place le logo devant le SVG */
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crée une grille avec 3 colonnes */
+    gap: 20px; /* Espace entre les éléments */
+    justify-items: center; /* Centre les éléments horizontalement */
+}
+
+.partenaires-section button {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-left: 42%;
+    background-color: #756B8C;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    color: white;
+    border-color: rebeccapurple;
+    border-radius: 10px;
+}
+
+.partenaires-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.partenaires-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.partenaires-section p {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25em;
+    margin-bottom: 40px;
+    color: white;
+
 }
