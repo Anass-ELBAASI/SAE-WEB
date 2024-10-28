@@ -14,7 +14,7 @@ html {
 
 header {
     width: 100%;
-    height: 70px;
+    height: 100px;
     background-color: #756B8C  ;
     color: white;
 
@@ -23,8 +23,8 @@ header {
 header h1 {
     display: flex;
     position: absolute;
-    margin: 20px;
-    font-size: 25px;
+    margin: 30px;
+    font-size: 100px;
 }
 
 header h1 {
@@ -54,11 +54,13 @@ header nav ul li {
 header nav ul li a {
     display: block;
     height: 100%;
-    width: 200px;
-    line-height: 70px;
+    width: 250px;
+    line-height: 100px;
     text-decoration: none;
     color: white;
+    font-family: "Bebas Neue", sans-serif;
     text-align: center;
+    font-size: 2.5em;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -71,3 +73,108 @@ header nav ul li a:hover {
     scroll-snap-align: start ;
 }
 
+/* IMAGE */
+
+.image-dessous-navbar {
+    background-size: cover; /* Étire l'image pour couvrir tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* Étend l'élément sur toute la largeur */
+    height: 500px; /* Ajustez la hauteur en fonction de votre besoin */
+}
+
+/* CARROUSSEL */
+
+/* Carousel Section */
+.carousel-section {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Controls */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Active slide */
+.active {
+    display: block;
+}
+
+/* SECTIONS ACTUALITES */
+
+/* Actualités Section */
+.actualites-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e3d9e8;
+}
+
+.actualites-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #756B8C;
+}
+
+.actualites-section p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #756B8C;
+}
+
+.actualites {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.actualite {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.actualite img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.actualite h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
