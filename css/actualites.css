@@ -108,7 +108,16 @@ button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    animation: slideInFromRight 1s ease-out;
 }
+h1.titre-actualites {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+    animation: slideInFromRight 1s ease-out;
+}
+
 
 /* Pagination */
 .pagination {
