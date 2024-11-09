@@ -107,3 +107,64 @@ h1.titre-actualites {
     font-size: 24px;
     color: #333;
 }
+/* Style du popup en plein écran */
+.popup-bulle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    display: none; /* Caché par défaut */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Contenu du popup centré */
+.popup-content {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Style pour l'image dans le popup */
+.popup-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Bouton de fermeture */
+.popup-bulle .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+.popup-button:hover {
+    background-color: #77bcf3;
+}
+.popup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #77bcf3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}

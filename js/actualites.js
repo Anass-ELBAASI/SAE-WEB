@@ -62,3 +62,27 @@ document.querySelectorAll(".filters button").forEach(button => {
         button.style.transform = "scale(1)";
     });
 });
+
+// Fonction pour afficher le popup
+function showPopup(event) {
+    // Affiche le popup
+    const popup = document.getElementById("popup-bulle");
+    popup.style.display = "flex"; // Utilise flex pour centrer le contenu
+
+    // Empêche la propagation du clic vers d'autres éléments
+    event.stopPropagation();
+}
+
+// Fonction pour fermer le popup
+function closePopup() {
+    document.getElementById("popup-bulle").style.display = "none";
+}
+
+// Fermer le popup si on clique en dehors du contenu
+document.addEventListener("click", function(event) {
+    const popup = document.getElementById("popup-bulle");
+    const content = document.querySelector(".popup-content");
+    if (popup.style.display === "flex" && !content.contains(event.target)) {
+        closePopup();
+    }
+});
