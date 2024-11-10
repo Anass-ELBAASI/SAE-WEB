@@ -86,3 +86,14 @@ document.addEventListener("click", function(event) {
         closePopup();
     }
 });
+
+
+// Fonction pour défiler vers le haut
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Fonction pour défiler vers le bas
+function scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
