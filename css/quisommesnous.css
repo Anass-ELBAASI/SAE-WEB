@@ -1,0 +1,181 @@
+html{
+    background-color:#c0b4c4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.band {
+    position: relative;
+    overflow: hidden;
+    height: auto; /* Ajuste la hauteur */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: height 0.5s ease; /* Animation de déroulement */
+    box-sizing: border-box;
+}
+.band p {
+    padding: 20px;
+    border-radius: 15px; /* Coins arrondis */
+    font-family: 'Georgia', serif; /* Remplacez par la police voulue pour le contenu */
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify; /* Alignement du texte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    margin: 0 auto; /* Centrage automatique */
+    width: 80%; /* Largeur adaptable */
+}
+ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: disc;
+    text-align: left; /* Alignement à gauche pour des listes bien structurées */
+}
+li {
+    margin-bottom: 10px; /* Espace entre les éléments de la liste */
+    line-height: 1.6; /* Bonne lisibilité */
+    font-family: 'Georgia', serif;
+}
+.band p, .band ul {
+    padding: 3em;
+    border-radius: 2px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre légère */
+    font-family: 'Georgia', serif; /* Police pour harmoniser le contenu */
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 auto; /* Centrage horizontal */
+    width: 80%; /* Ajuster la largeur du texte */
+
+}
+.text {
+    padding: 20px;
+    font-size: 18px;
+    text-align: justify; /* Pour un alignement propre */
+    width: 80%; /* Ajuste la largeur de contenu */
+    margin: 0 auto; /* Centre automatiquement */
+}
+.text ul {
+    margin-top: 10px; /* Un peu d'espace avant les listes */
+}
+.left-band {
+    background-color: #b0d8d5;
+    color: #333;
+    transform: translateX(-100%);
+    opacity: 0; /* Masqué initialement */
+    transition: transform 1s ease, opacity 1s ease;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.right-band {
+    background-color: #d79eb7;
+    color: #333;
+    transform: translateX(100%);
+    opacity: 0; /* Masqué initialement */
+    transition: transform 1s ease, opacity 1s ease;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+.band .text {
+    padding: 20px;
+    font-size: 18px;
+}
+.band h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.band:nth-child(3){
+    background-color: #3c8ab1;
+}
+/* Animation */
+.show-left-band {
+    animation: slideInLeft 1s forwards;
+    opacity: 1;
+}
+.show-right-band {
+    animation: slideInRight 1s forwards;
+    opacity: 1;
+}
+
+.PDF {
+    display: flex;
+    align-self: center;
+
+}
+.PDF img{
+    width: 10em;
+}
+.PDF img:hover{
+    cursor: pointer;
+}
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Media Query pour responsive */
+@media (max-width: 768px) {
+    header, .content .text {
+        font-size: 16px;
+    }
+
+    .band .text {
+        font-size: 16px;
+    }
+}
