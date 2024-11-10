@@ -239,3 +239,16 @@ header nav ul li a:hover {
     color: white;
 
 }
+
+.actualites-section h2{
+    color: black;
+}
+.actualites-section p{
+    color: black;
+}
+.partenaires-section p{
+    color: black;
+}
+.partenaires-section h2{
+    color: black;
+}
