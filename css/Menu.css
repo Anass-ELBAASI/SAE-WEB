@@ -18,12 +18,15 @@ header {
     color: white;
 
 }
-
 header h1 {
     display: flex;
     position: absolute;
     margin: 30px;
     font-size: 100px;
+}
+
+header h1 {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
