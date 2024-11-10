@@ -13,6 +13,7 @@
 <body>
 <header>
     <h1><img src="../image/logo.png" alt="Logo FFCM"></h1>
+    <!-- Bouton pour faire défiler vers le haut -->
     <nav>
         <ul>
             <li><a href="./accueil.html"> Acceuil</a></li>
@@ -25,25 +26,41 @@
 
 <img src="../image/Q10.png" class="image-dessous-navbar">
 
+<button onclick="scrollToBottom()" id="scrollDownBtn" title="Bas de page">↓</button>
+<button onclick="scrollToTop()" id="scrollUpBtn" title="Haut de page">↑</button>
+
 <!-- Titre principal des actualités -->
     <h1 class="titre-actualites">Nos dernières actualités</h1>
 
-    <!-- Boutons pour filtrer -->
-    <div class="filters">
-        <button>Filtrer par thématique</button>
-        <button>Filtrer par profil</button>
-        <button> <a href="./ancienArticle.html">Ancien article</a> </button> <!-- Bouton des anciens articles-->
-    </div>
+    <!-- Boutons -->
+<div class="filters">
+    <button > <a href="./ancienArticle.html"> Anciens articles </a></button>
+</div>
 
     <!-- Grille d'actualités -->
     <section class="actualites-grid">
-        <a href="https://docs.wixstatic.com/ugd/cdd428_cbf1bf82b5a84b908438d9f8b57e8ec1.pdf">
+
+
+        <!-- Article avec un lien -->
+        <a href="https://docs.wixstatic.com/ugd/cdd428_cbf1bf82b5a84b908438d9f8b57e8ec1.pdf" target="_blank" onclick="showPopup(event); return false;">
             <div class="box">
                 <p>Covid-19</p>
                 <p>Thermalisme</p>
                 <img src="../image/sectionActu/cure-covid.webp" alt="Cure covid">
             </div>
         </a>
+
+        <!-- Conteneur de la bulle d'information en plein écran -->
+        <div id="popup-bulle" class="popup-bulle">
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopup()">X</button>
+                <h2>Informations sur le Covid-19 et le thermalisme</h2>
+                <p>Le thermalisme offre des solutions de bien-être et de soin durant la pandémie de Covid-19. Voici des informations importantes pour les patients potentiels.</p>
+                <!-- Bouton "En savoir plus" -->
+                <a href="https://docs.wixstatic.com/ugd/cdd428_cbf1bf82b5a84b908438d9f8b57e8ec1.pdf" target="_blank" class="popup-button">En savoir plus</a>
+            </div>
+        </div>
+
         <a href="https://docs.wixstatic.com/ugd/cdd428_36afe0c5927a4d788626d64be160ec2e.pdf">
             <div class="box">
                 <p>Été 2019</p>
@@ -99,12 +116,6 @@
                 <img src="../image/sectionActu/invitation.png" alt="Invitation Réunion">
             </div>
         </a>
-        <a href="https://docs.wixstatic.com/ugd/cdd428_cf679094bd80456fbf6471ba8065d817.pdf">
-            <div class="box">
-                <p>Colloque européen</p>
-                <img src="../image/sectionActu/europe.png" alt="Colloque Européen">
-            </div>
-        </a>
     </section>
 
     <!-- Pagination -->
@@ -113,5 +124,7 @@
         <span>1 ... 2 ... 3 ... 4</span>
         <a href="./ancienArticle.html">Page suivante</a>
     </div>
+
+
 </body>
 </html>

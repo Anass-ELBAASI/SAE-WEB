@@ -24,9 +24,14 @@
 </header>
 
 <img src="../image/Q10.png" class="image-dessous-navbar">
+<button onclick="scrollToBottom()" id="scrollDownBtn" title="Bas de page">↓</button>
+<button onclick="scrollToTop()" id="scrollUpBtn" title="Haut de page">↑</button>
+
+<!-- Titre principal des actualités -->
+<h1 class="titre-actualites">Nos anciennes actualités</h1>
 
 <div class="filters">
-  <button > <a href="./actualites.html"> Retour en arrière </a></button>
+  <button > <a href="./actualites.html"> actualités principales </a></button>
 </div>
 <section class="actualites-grid">
   <a href="https://www.ffcm.info/_files/ugd/cdd428_38b54492fce74a12ba8a86e9d1c58bcd.pdf">
@@ -57,11 +62,10 @@
       <img src="../image/sectionActu/réunionAccb.jpg" alt="Cure covid">
     </div>
   </a>
-  <a href="https://www.ffcm.info/_files/ugd/cdd428_a5d3af6af5e842a1929f6c86090e0d55.pdf">
+  <a href="https://docs.wixstatic.com/ugd/cdd428_cf679094bd80456fbf6471ba8065d817.pdf">
     <div class="box">
-      <p>Châtel-Guyon</p>
-      <p>Réunion d'information</p>
-      <img src="../image/sectionActu/cure-covid.webp" alt="Cure covid">
+      <p>Colloque européen</p>
+      <img src="../image/sectionActu/europe.png" alt="Colloque Européen">
     </div>
   </a>
   <a href="https://www.ffcm.info/_files/ugd/cdd428_0fb89c24975e4e609b086d84c6160dea.pdf">
@@ -107,5 +111,11 @@
     </div>
   </a>
 </section>
+<!-- Pagination -->
+<div class="pagination">
+  <a href="./actualites.html">Page précédente</a>
+  <span>1 ... 2 ... 3 ... 4</span>
+  <a href="./actualites.html">Page suivante</a>
+</div>
 </body>
 </html>
