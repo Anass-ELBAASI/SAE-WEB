@@ -51,6 +51,7 @@ header nav ul li a {
     gap: 20px;
     padding: 20px;
 }
+
 .band {
     position: relative;
     overflow: hidden;
@@ -172,10 +173,88 @@ li {
 /* Media Query pour responsive */
 @media (max-width: 768px) {
     header, .content .text {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .band .text {
+        font-size: 1em;
+    }
+    .band p, .band ul {
+        padding: 3em;
+        border-radius: 2px; /* Coins arrondis */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre légère */
+        font-family: 'Georgia', serif; /* Police pour harmoniser le contenu */
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin: 0 auto; /* Centrage horizontal */
+        width: 100%; /* Ajuster la largeur du texte */
+
+    }
+}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    header .logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .band {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .band p, .band ul {
+        padding: 2em;
+        font-size: 0.9rem;
+        width: 90%;
+    }
+
+    .band h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .text {
         font-size: 16px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .PDF img {
+        width: 8em;
+    }
+
+    .band .text {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .left-band, .right-band {
+        padding: 15px;
+        border-radius: 10px;
     }
 }

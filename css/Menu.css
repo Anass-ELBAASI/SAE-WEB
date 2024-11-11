@@ -1,6 +1,7 @@
-html{
-    background-color:#c0b4c4;
+html {
+    background-color: #c0b4c4;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,6 @@ html{
 
 body {
     font-family: Arial, sans-serif;
-
 }
 
 header {
@@ -45,53 +45,51 @@ header nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 .content {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
+
 /* Carousel Section */
-.carousel-section {
-    width: 100%;
-    margin: 20px 0;
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 
-.carousel {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
+.section {
+    text-align: center;
+    max-width: 200px;
 }
 
-.slide {
-    display: none;
+.container .section img {
+    width: 150px; /* Largeur définie de l'image */
+    height: 150px; /* Hauteur définie de l'image */
+    object-fit: cover; /* Assure que l'image remplisse le conteneur sans déformation */
 }
 
-.slide img {
+.section img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
-/* Controls */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
+.section a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25em;
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+.section a:hover {
+    color: #5E4B7E;
 }
 
 /* Active slide */
@@ -100,24 +98,27 @@ header nav ul li a {
 }
 
 /* SECTIONS ACTUALITES */
-
 .actualites-section {
     text-align: center;
     padding: 40px 20px;
     background-color: #e3d9e8;
 }
 
+.actualites-section h2,
+.actualites-section p {
+    color: black;
+}
+
 .actualites-section h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: white;
+    color: black;
     font-family: "Bebas Neue", sans-serif;
 }
 
 .actualites-section p {
     font-size: 1.25em;
     margin-bottom: 40px;
-    color: white;
     font-family: "Bebas Neue", sans-serif;
 }
 
@@ -146,8 +147,7 @@ header nav ul li a {
     color: #333;
 }
 
-/* partenaires */
-
+/* PARTENAIRES */
 .logo-item {
     position: relative;
     width: 150px;
@@ -157,20 +157,45 @@ header nav ul li a {
     justify-content: center;
     overflow: hidden;
     margin: 10px;
+    border-radius: 15px; /* Coins arrondis pour plus d'effet */
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo-item img {
     width: 65%; /* Ajustez en fonction de la taille souhaitée du logo dans le carré SVG */
     height: auto;
     position: relative;
-    z-index: 1; /* Place le logo devant le SVG */
+    z-index: 1;
 }
 
+/* Grille des logos */
 .logos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crée une grille avec 3 colonnes */
-    gap: 20px; /* Espace entre les éléments */
-    justify-items: center; /* Centre les éléments horizontalement */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.partenaires-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.partenaires-section h2,
+.partenaires-section p {
+    color: black;
+}
+
+.partenaires-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.partenaires-section p {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25em;
+    margin-bottom: 40px;
 }
 
 .partenaires-section button {
@@ -186,35 +211,136 @@ header nav ul li a {
     border-radius: 10px;
 }
 
-.partenaires-section {
-    text-align: center;
-    padding: 40px 20px;
+/* Animation d'agrandissement et de changement de couleur au survol */
+.logo-item:hover .animated-svg {
+    animation: scaleUp 0.4s ease-in-out forwards, colorChange 0.4s ease-in-out forwards;
+}
+@keyframes colorChange {
+    from {
+        fill: #f1f1f1;
+        stroke: #756B8C;
+    }
+    to {
+        fill: #ececec; /* Nouvelle couleur de fond */
+        stroke: #a95ec9; /* Nouvelle couleur de la bordure */
+    }
+}
+/*FIN DE Map FOOTER*/
+
+.footer {
+    background-color: #7e7095;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));  /* Augmenter la largeur minimale des colonnes */
+    gap: 2.5rem;  /* Augmenter l'espace entre les boîtes */
+    padding: 2rem; /* Ajouter un peu de padding pour augmenter la taille globale */
 }
 
-.partenaires-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;  /* Pour aligner verticalement le titre et le logo */
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+.footer-box a {
     color: white;
     font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 1rem;  /* Augmenter légèrement l'espacement entre les liens */
+    transition: all .50s ease;
 }
 
-.partenaires-section p {
+.footer-box a:hover {
+    transform: translateX(4px);
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;  /* Aligne verticalement le titre et l'image */
+    justify-content: flex-start; /* Aligne à gauche */
+    margin-bottom: 15px;
+    font-size: 20px;
     font-family: "Bebas Neue", sans-serif;
-    font-size: 1.25em;
-    margin-bottom: 40px;
-    color: white;
-
+    font-weight: 600;
+    color: black;
 }
 
-.actualites-section h2{
-    color: black;
+.email-logo {
+    width: 30px;  /* Réduit la taille du logo */
+    height: 30px; /* Garde la proportion du logo */
+    margin-left: 8px; /* Espacement entre le titre et le logo */
 }
-.actualites-section p{
-    color: black;
+
+/* Responsive adjustments using media queries */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;  /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .section img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logos {
+        grid-template-columns: repeat(2, 1fr);  /* 2 logos per row on medium screens */
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
 }
-.partenaires-section p{
-    color: black;
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;  /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .section img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logos {
+        grid-template-columns: 1fr;  /* 1 logo per row on small screens */
+    }
+
+    .footer {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .actualite img {
+        width: 100%;
+        height: auto;
+    }
 }
-.partenaires-section h2{
-    color: black;
+
+@media screen and (max-width: 480px) {
+    .actualites-section h2 {
+        font-size: 1.2em;
+    }
+
+    .actualites-section p {
+        font-size: 1em;
+    }
+
+    .actualite h3 {
+        font-size: 16px;
+    }
+
+    .footer-box h3 {
+        font-size: 18px;
+    }
+
+    .footer-box a {
+        font-size: 0.9em;
+    }
 }

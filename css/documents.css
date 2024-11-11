@@ -56,7 +56,7 @@ header nav ul li a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .container {
@@ -91,19 +91,6 @@ body {
 .container {
     padding: 20px;
 }
-
-/* Style pour la barre de recherche */
-#myInput {
-    background-image: url('/css/searchicon.png');
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-}
-
 /* Mise en page des documents */
 .documents {
     display: grid;
@@ -128,8 +115,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    font-family: 'Bebas Neue', sans-serif;
 }
-
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
 .doc-card:hover {
     transform: scale(1.05);
 }
@@ -143,3 +133,54 @@ body {
 .bg-purple:hover { background-color: #5E4B7E; }
 .bg-pink:hover { background-color: #A93358; }
 .bg-dark-blue:hover { background-color: #253c70; }
+
+/* Responsive Design for smaller screens */
+
+/* Mobile screens */
+@media (max-width: 767px) {
+    .documents {
+        grid-template-columns: 1fr; /* Stacks cards vertically */
+        gap: 10px;
+    }
+
+    .doc-card {
+        width: 100%; /* Makes each card take full width */
+        height: auto; /* Adjust height for readability */
+    }
+
+    /* Adjust title styling for smaller screens */
+    .section h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .documents {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 15px;
+    }
+
+    .doc-card {
+        width: 90%; /* Makes each card take 90% width of the container */
+        height: auto;
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+    .documents {
+        grid-template-columns: repeat(4, 1fr); /* Default grid setup for larger screens */
+        gap: 15px;
+    }
+
+    .doc-card {
+        width: 220px; /* Keeps the width of the document cards consistent */
+        height: 80px;
+    }
+}

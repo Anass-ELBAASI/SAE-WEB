@@ -1,0 +1,128 @@
+html{
+    background-color:#c0b4c4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+/* FORMULAIRE */
+.box {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: 0; /* Réinitialise les marges */
+}
+
+.contact {
+    width: 50%; /* Largeur du formulaire */
+    max-width: 600px; /* Limite la largeur maximale du formulaire */
+    height: auto; /* Ajuste la hauteur selon le contenu */
+    border-radius: 10px;
+    background-color: #C5416A;
+    border: 5px solid;
+}
+
+.A {
+    background-color: #756B8C;
+    position: absolute;
+    margin-bottom: 5%;
+    margin-left: 35%;
+    z-index: 1;
+}
+
+.contact-form {
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.A h1 {
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-top: 3%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2%;
+    margin: 4% 0;
+    transition: 0.5s;
+
+    background-color: #c0b4c4; /* Fond sombre pour les champs */
+    color: black; /* Couleur du texte en blanc */
+    padding: 3%;
+    border: none; /* Enlève la bordure par défaut des champs */
+    border-radius: 5px; /* Arrondi des coins */
+}
+
+.contact-form-text:hover {
+    box-shadow: 0 0 10px 5px #C5416A;
+}
+
+.contact-form-btn {
+    margin-left: 65%;
+    margin-bottom: 3%;
+    padding: 2%;
+    border-radius: 8px;
+    width: 30%;
+    background-color: #C5416A; /* Couleur de fond du bouton */
+    color: white; /* Texte du bouton en blanc */
+    border: none; /* Pas de bordure sur le bouton */
+}
+
+.contact-form-btn:hover {
+    background-color: #A6344B; /* Couleur du bouton au survol */
+    transition: 0.5s;
+}
+

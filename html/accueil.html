@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
+<script src="../js/loadfooter.js" type="module"></script>
 <script src="../js/loadNavBar.js" type="module"></script>
 <head>
     <meta charset="UTF-8">
@@ -14,21 +14,23 @@
 </head>
 <body>
 <div id="navbar-container"></div>
-<section class="carousel-section">
-    <div class="carousel">
-        <div class="slide active">
-            <img src="image1.jpg" alt="A propos de nous">
-        </div>
-        <div class="slide">
-            <img src="image2.jpg" alt="Evenements">
-        </div>
-        <div class="slide">
-            <img src="image3.jpg" alt="Informations Importantes">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div class="container">
+    <div class="section">
+        <a href="./quisommesnous.html">A Propos De Nous</a>
+        <img src="../image/SECTION-ACTUALITE/info.png" alt="Image A Propos De Nous">
     </div>
-</section>
+
+    <div class="section">
+        <a href="./actualites.html">Evénements</a>
+        <img src="../image/SECTION-ACTUALITE/event.png" alt="Image Evénements">
+    </div>
+
+    <div class="section">
+        <a href="./documents.html">Informations Importantes</a>
+        <img src="../image/SECTION-ACTUALITE/important.png" alt="Image Informations Importantes">
+    </div>
+</div>
 
 <section class="actualites-section">
     <h2>Au quotidien</h2>
@@ -61,8 +63,11 @@
         <div class="logo-item"><img src="../image/SECTION-PARTENAIRE/ASSO5.png" alt="L'Officiel International"></div>
         <div class="logo-item"><img src="../image/SECTION-PARTENAIRE/FRANCEASSOSSANTE.png" alt="France Assos Santé"></div>
     </div>
-    <button class="newsletter-btn">S'inscrire à la newsletter</button>
+    <button class="newsletter-btn" onclick="window.location.href='newsletter.html'">S'inscrire à la newsletter</button>
 </section>
 
+<!--Design du bas de la page d'accueil-->
+
+<div id="footer-container"></div>
 </body>
 </html>

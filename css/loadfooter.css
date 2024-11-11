@@ -1,0 +1,118 @@
+/*FIN DE Map FOOTER*/
+
+.footer {
+    background-color: #7e7095;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));  /* Augmenter la largeur minimale des colonnes */
+    gap: 2.5rem;  /* Augmenter l'espace entre les boîtes */
+    padding: 2rem; /* Ajouter un peu de padding pour augmenter la taille globale */
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;  /* Pour aligner verticalement le titre et le logo */
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+.footer-box a {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 1rem;  /* Augmenter légèrement l'espacement entre les liens */
+    transition: all .50s ease;
+}
+
+.footer-box a:hover {
+    transform: translateX(4px);
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;  /* Aligne verticalement le titre et l'image */
+    justify-content: flex-start; /* Aligne à gauche */
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.email-logo {
+    width: 30px;  /* Réduit la taille du logo */
+    height: 30px; /* Garde la proportion du logo */
+    margin-left: 8px; /* Espacement entre le titre et le logo */
+}
+/* Responsive adjustments using media queries */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;  /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .section img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logos {
+        grid-template-columns: repeat(2, 1fr);  /* 2 logos per row on medium screens */
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;  /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .section img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logos {
+        grid-template-columns: 1fr;  /* 1 logo per row on small screens */
+    }
+
+    .footer {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    .actualite img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .actualites-section h2 {
+        font-size: 1.2em;
+    }
+
+    .actualites-section p {
+        font-size: 1em;
+    }
+
+    .actualite h3 {
+        font-size: 16px;
+    }
+
+    .footer-box h3 {
+        font-size: 18px;
+    }
+
+    .footer-box a {
+        font-size: 0.9em;
+    }
+}

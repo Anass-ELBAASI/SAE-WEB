@@ -9,50 +9,62 @@
     <link rel="stylesheet" href="../css/documents.css">
     <script src="../js/documents.js" type="module"></script>
     <script src="../js/loadNavBar.js" type="module"></script>
+    <script src="../js/loadfooter.js" type="module"></script>
 </head>
 <body>
 
 <div id="navbar-container"></div>
 
 <div class="container">
-    <!-- Barre de recherche -->
-    <input type="text" id="myInput" onkeyup="searchDocuments()" placeholder="Rechercher des documents..." title="Tapez un nom de document">
 
     <!-- Sections de documents -->
     <div id="documentsContainer">
         <div class="section cure">
             <h2>La cure en pratique</h2>
-            <div class="documents">
-                <a href="lien_document1.pdf" target="_blank" class="doc-card bg-blue">Destinations Thermale</a>
-                <a href="lien_document2.pdf" target="_blank" class="doc-card bg-blue">Réservations de Cure</a>
-                <a href="lien_document3.pdf" target="_blank" class="doc-card bg-blue">Droits des Curistes 05/19</a>
+            <div class="documents" id="cureDocs">
+                <a href="https://www.medecinethermale.fr/curistes/en-pratique/annuaire-des-stations-thermales.html" target="_blank" class="doc-card bg-blue">Destinations Thermale</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_3dc1a59bb79a4b69b6b2905e2cc22183.pdf" target="_blank" class="doc-card bg-blue">Imprimé prise prise en charge</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_876f2f53e9964f6f84f8292fc83cfc5f.pdf" target="_blank" class="doc-card bg-blue">Réservations de cure</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_dc1bf3ee2d684e498539ffa5168d1aa8.pdf" target="_blank" class="doc-card bg-blue">Grille des soins V 2023</a>
+                <!-- Ajouter d'autres documents ici -->
             </div>
         </div>
 
         <div class="section actions">
             <h2>Nos Actions</h2>
-            <div class="documents">
-                <a href="lien_document4.pdf" target="_blank" class="doc-card bg-purple">Nos Principales Actions</a>
-                <a href="lien_document5.pdf" target="_blank" class="doc-card bg-purple">Délégué pour le Handicap</a>
+            <div class="documents" id="actionsDocs">
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_012ed77a88414b48877fd1f66941daa4.pdf" target="_blank" class="doc-card bg-purple">Nos Principales Actions</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_59cfd311bc5a4b38a2ef2c86c1a47de7.pdf" target="_blank" class="doc-card bg-purple">Délégué pour le Handicap</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_889b5d300dd04d049aeee54cdf8e0f86.pdf" target="_blank" class="doc-card bg-purple">Oui aux 3 visites médicales</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_6b005e9721014f8e9b84aa719ad610f2.pdf" target="_blank" class="doc-card bg-purple">Alerte FFCM 2024</a>
+                <!-- Ajouter d'autres documents ici -->
             </div>
         </div>
 
         <div class="section vie">
             <h2>Vie de la FFCM</h2>
-            <div class="documents">
-                <a href="lien_document6.pdf" target="_blank" class="doc-card bg-pink">Règlement Intérieur</a>
+            <div class="documents" id="vieDocs">
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_c1a67369d12941358587535fb64b88e8.pdf" target="_blank" class="doc-card bg-pink">Règlement Intérieur</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_7a6fb1187e2c4bf8a188c2589a9e0ac1.pdf" target="_blank" class="doc-card bg-pink">Status (02/05/2024)</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_b10361b9cddd40e1b7f07f6aede3e7f1.pdf" target="_blank" class="doc-card bg-pink">Renouv Agrément 2024</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_e779a1057aab4262b479debaa31024fe.pdf" target="_blank" class="doc-card bg-pink">Elus au Bureau et au CA</a>
+                <!-- Ajouter d'autres documents ici -->
             </div>
         </div>
 
         <div class="section divers">
             <h2>Divers</h2>
-            <div class="documents">
-                <a href="lien_document8.pdf" target="_blank" class="doc-card bg-dark-blue">Vidéos Diverses</a>
-                <a href="lien_document9.pdf" target="_blank" class="doc-card bg-dark-blue">Données Économiques</a>
+            <div class="documents" id="diversDocs">
+                <a href="https://www.medecinethermale.fr/videos/" target="_blank" class="doc-card bg-dark-blue">Vidéos Diverses</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_fb6feb5ca87244f59390f74e7ada0efb.pdf" target="_blank" class="doc-card bg-dark-blue">Charte Parcours de Santé </a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_49de7404ba0b45b8b51773b44ad9cd81.pdf" target="_blank" class="doc-card bg-dark-blue">Rapport patient-médecin</a>
+                <a href="https://www.ffcm.info/_files/ugd/cdd428_31b8ba09825c464a935b7476b2592a43.pdf" target="_blank" class="doc-card bg-dark-blue">Décret n°2024-2025</a>
+                <!-- Ajouter d'autres documents ici -->
             </div>
         </div>
     </div>
 </div>
+<footer><div id="footer-container"></div></footer>
 
 </body>
 </html>
