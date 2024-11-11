@@ -3,9 +3,9 @@
 .footer {
     background-color: #7e7095;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, auto));  /* Augmenter la largeur minimale des colonnes */
-    gap: 2.5rem;  /* Augmenter l'espace entre les boîtes */
-    padding: 2rem; /* Ajouter un peu de padding pour augmenter la taille globale */
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    gap: 2.5rem;
+    padding: 2rem;
 }
 
 .footer-box {
@@ -15,7 +15,7 @@
 
 .footer-box h3 {
     display: flex;
-    align-items: center;  /* Pour aligner verticalement le titre et le logo */
+    align-items: center;
     margin-bottom: 15px;
     font-size: 20px;
     font-family: "Bebas Neue", sans-serif;
@@ -25,7 +25,7 @@
 .footer-box a {
     color: white;
     font-family: "Bebas Neue", sans-serif;
-    margin-bottom: 1rem;  /* Augmenter légèrement l'espacement entre les liens */
+    margin-bottom: 1rem;
     transition: all .50s ease;
 }
 
@@ -35,8 +35,8 @@
 
 .footer-box h3 {
     display: flex;
-    align-items: center;  /* Aligne verticalement le titre et l'image */
-    justify-content: flex-start; /* Aligne à gauche */
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 15px;
     font-size: 20px;
     font-family: "Bebas Neue", sans-serif;
@@ -45,14 +45,14 @@
 }
 
 .email-logo {
-    width: 30px;  /* Réduit la taille du logo */
-    height: 30px; /* Garde la proportion du logo */
-    margin-left: 8px; /* Espacement entre le titre et le logo */
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
 }
-/* Responsive adjustments using media queries */
+/* Responsive */
 @media screen and (max-width: 1024px) {
     .container {
-        flex-direction: column;  /* Stack sections vertically */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -62,17 +62,17 @@
     }
 
     .logos {
-        grid-template-columns: repeat(2, 1fr);  /* 2 logos per row on medium screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column;  /* Stack sections vertically */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -82,11 +82,11 @@
     }
 
     .logos {
-        grid-template-columns: 1fr;  /* 1 logo per row on small screens */
+        grid-template-columns: 1fr;
     }
 
     .footer {
-        grid-template-columns: 1fr; /* 1 column on small screens */
+        grid-template-columns: 1fr;
     }
 
     .actualite img {

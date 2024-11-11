@@ -71,7 +71,7 @@ document.querySelectorAll(".filters button").forEach((button) => {
 function showPopup(event) {
     const popup = document.getElementById("popup-bulle");
     popup.style.display = "flex";
-    event.stopPropagation(); // Empêche le clic de se propager
+    event.stopPropagation();
 }
 
 // Fonction pour fermer le popup d'information

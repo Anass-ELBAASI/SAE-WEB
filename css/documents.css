@@ -74,8 +74,8 @@ select {
 }
 
 .section h2 {
-    text-align: center; /* Centre le texte horizontalement */
-    margin-bottom: 10px; /* Ajoute un espace sous le titre pour le séparer des blocs */
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 * {
@@ -134,21 +134,21 @@ h2 {
 .bg-pink:hover { background-color: #A93358; }
 .bg-dark-blue:hover { background-color: #253c70; }
 
-/* Responsive Design for smaller screens */
+/* Responsive  */
 
-/* Mobile screens */
+/* Ecran smartphone */
 @media (max-width: 767px) {
     .documents {
-        grid-template-columns: 1fr; /* Stacks cards vertically */
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
     .doc-card {
-        width: 100%; /* Makes each card take full width */
-        height: auto; /* Adjust height for readability */
+        width: 100%;
+        height: auto;
     }
 
-    /* Adjust title styling for smaller screens */
+
     .section h2 {
         font-size: 1.5rem;
         padding: 10px;
@@ -157,30 +157,45 @@ h2 {
     .container {
         padding: 10px;
     }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Tablet screens */
 @media (min-width: 768px) and (max-width: 1023px) {
     .documents {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
     .doc-card {
-        width: 90%; /* Makes each card take 90% width of the container */
+        width: 90%;
         height: auto;
     }
 }
 
-/* Desktop screens */
+/* ecran pc */
 @media (min-width: 1024px) {
     .documents {
-        grid-template-columns: repeat(4, 1fr); /* Default grid setup for larger screens */
+        grid-template-columns: repeat(4, 1fr);
         gap: 15px;
     }
 
     .doc-card {
-        width: 220px; /* Keeps the width of the document cards consistent */
+        width: 220px;
         height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .footer-box h3 {
+        font-size: 18px;
+    }
+
+    .footer-box a {
+        font-size: 0.9em;
     }
 }

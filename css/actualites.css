@@ -225,7 +225,7 @@ h1.titre-actualites {
 
 /* Responsiveness */
 
-/* Pour les écrans de taille moyenne (tablettes) */
+/* Pour les tablettes */
 @media (max-width: 768px) {
     .actualites-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -250,7 +250,7 @@ h1.titre-actualites {
     }
 }
 
-/* Pour les petits écrans (smartphones) */
+/* Pour les smartphones */
 @media (max-width: 480px) {
     .actualites-grid {
         grid-template-columns: 1fr;
@@ -285,12 +285,10 @@ h1.titre-actualites {
     }
 }
 
-
-
 /* Bouton pour défiler vers le haut */
 #scrollUpBtn {
     position: fixed;
-    bottom: 70px; /* Position du bouton en bas */
+    bottom: 70px;
     right: 20px;
     width: 40px;
     height: 40px;
@@ -309,7 +307,7 @@ h1.titre-actualites {
 /* Bouton pour défiler vers le bas */
 #scrollDownBtn {
     position: fixed;
-    bottom: 120px; /* Positionné au-dessus du bouton "haut" */
+    bottom: 120px;
     right: 20px;
     width: 40px;
     height: 40px;

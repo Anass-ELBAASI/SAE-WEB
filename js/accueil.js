@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         rect.setAttribute("fill", "#f1f1f1");
         rect.setAttribute("stroke", "#756B8C");
         rect.setAttribute("stroke-width", "5");
-        rect.classList.add("animated-svg"); // Ajoute la classe pour l'animation
+        rect.classList.add("animated-svg");
 
         svg.appendChild(rect);
         item.prepend(svg);

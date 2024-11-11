@@ -56,13 +56,13 @@ header nav ul li a {
     display: flex;
     justify-content: left;
     flex-direction: column;
-    margin: 0; /* Réinitialise les marges */
+    margin: 0;
 }
 
 .contact {
-    width: 50%; /* Largeur du formulaire */
-    max-width: 600px; /* Limite la largeur maximale du formulaire */
-    height: auto; /* Ajuste la hauteur selon le contenu */
+    width: 50%;
+    max-width: 600px;
+    height: auto;
     border-radius: 10px;
     background-color: #C5416A;
     border: 5px solid;
@@ -99,11 +99,11 @@ header nav ul li a {
     margin: 4% 0;
     transition: 0.5s;
 
-    background-color: #c0b4c4; /* Fond sombre pour les champs */
-    color: black; /* Couleur du texte en blanc */
+    background-color: #c0b4c4;
+    color: black;
     padding: 3%;
-    border: none; /* Enlève la bordure par défaut des champs */
-    border-radius: 5px; /* Arrondi des coins */
+    border: none;
+    border-radius: 5px;
 }
 
 .contact-form-text:hover {
@@ -116,13 +116,62 @@ header nav ul li a {
     padding: 2%;
     border-radius: 8px;
     width: 30%;
-    background-color: #C5416A; /* Couleur de fond du bouton */
-    color: white; /* Texte du bouton en blanc */
-    border: none; /* Pas de bordure sur le bouton */
+    background-color: #C5416A;
+    color: white;
+    border: none;
 }
 
 .contact-form-btn:hover {
-    background-color: #A6344B; /* Couleur du bouton au survol */
+    background-color: #A6344B;
     transition: 0.5s;
 }
+/* Responsive*/
+@media (max-width: 768px) {
+    .box {
+        padding: 15px;
+    }
 
+    .contact h1 {
+        font-size: 20px;
+    }
+
+    .contact-form-text, .contact-form-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact h1 {
+        font-size: 18px;
+    }
+
+    .contact-form-btn {
+        padding: 10px;
+    }
+}
+/* Responsive: menu mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #756B8C;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
