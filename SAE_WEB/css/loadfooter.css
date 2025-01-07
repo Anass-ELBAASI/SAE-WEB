@@ -1,0 +1,118 @@
+/*FIN DE Map FOOTER*/
+
+.footer {
+    background-color: #7e7095;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+.footer-box a {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 1rem;
+    transition: all .50s ease;
+}
+
+.footer-box a:hover {
+    transform: translateX(4px);
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.email-logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+}
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logos {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .actualite img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .actualites-section h2 {
+        font-size: 1.2em;
+    }
+
+    .actualites-section p {
+        font-size: 1em;
+    }
+
+    .actualite h3 {
+        font-size: 16px;
+    }
+
+    .footer-box h3 {
+        font-size: 18px;
+    }
+
+    .footer-box a {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(to bottom right, mediumpurple, peachpuff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;          /* Hauteur de la fenêtre */
+    margin: 0;
+    overflow: hidden;       /* Empêche les débordements */
+}
+
+.form-container {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    border: 1px solid #ddd;   /* Bordure légère */
+    border-radius: 10px;      /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    padding: 15px;            /* Espace intérieur réduit */
+    max-width: 60%;         /* Largeur maximale */
+    width: 90%;               /* Largeur flexible */
+    max-height: 90vh; /* Hauteur maximale de la boîte */
+    margin-top : 100px;
+    overflow-y: auto;         /* Ajoute un défilement vertical si nécessaire */
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;        /* Réduction de la taille du titre */
+    margin-bottom: 10px;
+}
+
+.form-container div {
+    margin-bottom: 10px;      /* Espacement réduit entre les questions */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 3px;       /* Espace réduit entre le label et l'input */
+    font-weight: bold;
+    font-size: 0.9rem;        /* Texte légèrement plus petit */
+}
+
+.form-container select,
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 8px;             /* Espacement intérieur réduit */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;        /* Taille de texte ajustée */
+}
+
+.form-container textarea {
+    resize: vertical;         /* Permet de redimensionner verticalement si nécessaire */
+}
+
+.form-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Styles pour les groupes de cases à cocher */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Ajoute de l'espace entre chaque option */
+    margin-top: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 20em; /* Ajoute de l'espace entre la case et le texte */
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+/* Ajustements globaux pour le formulaire */
+.question {
+    margin-bottom: 20px; /* Ajoute un espacement entre les questions */
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 16px;
+}
+

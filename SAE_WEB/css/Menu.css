@@ -1,0 +1,346 @@
+html {
+    background-color: #c0b4c4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Carousel Section */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.section {
+    text-align: center;
+    max-width: 200px;
+}
+
+.container .section img {
+    width: 150px; /* Largeur définie de l'image */
+    height: 150px; /* Hauteur définie de l'image */
+    object-fit: cover; /* Assure que l'image remplisse le conteneur sans déformation */
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.section a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25em;
+}
+
+.section a:hover {
+    color: #5E4B7E;
+}
+
+/* Active slide */
+.active {
+    display: block;
+}
+
+/* SECTIONS ACTUALITES */
+.actualites-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e3d9e8;
+}
+
+.actualites-section h2,
+.actualites-section p {
+    color: black;
+}
+
+.actualites-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.actualites-section p {
+    font-size: 1.25em;
+    margin-bottom: 40px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.actualites {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.actualite {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.actualite img {
+    width: 200px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.actualite h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* PARTENAIRES */
+.logo-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 15px; /* Coins arrondis pour plus d'effet */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-item img {
+    width: 65%; /* Ajustez en fonction de la taille souhaitée du logo dans le carré SVG */
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Grille des logos */
+.logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.partenaires-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.partenaires-section h2,
+.partenaires-section p {
+    color: black;
+}
+
+.partenaires-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.partenaires-section p {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25em;
+    margin-bottom: 40px;
+}
+
+.partenaires-section button {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-left: 42%;
+    background-color: #756B8C;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    color: white;
+    border-color: rebeccapurple;
+    border-radius: 10px;
+}
+
+/* Animation */
+.logo-item:hover .animated-svg {
+    animation: scaleUp 0.4s ease-in-out forwards, colorChange 0.4s ease-in-out forwards;
+}
+@keyframes colorChange {
+    from {
+        fill: #f1f1f1;
+        stroke: #756B8C;
+    }
+    to {
+        fill: #ececec;
+        stroke: #a95ec9;
+    }
+}
+/*FIN DE Map FOOTER*/
+
+.footer {
+    background-color: #7e7095;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    gap: 2.5rem;
+    padding: 2rem; /
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+.footer-box a {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 1rem;
+    transition: all .50s ease;
+}
+
+.footer-box a:hover {
+    transform: translateX(4px);
+}
+
+.footer-box h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.email-logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logos {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .actualite img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .actualites-section h2 {
+        font-size: 1.2em;
+    }
+
+    .actualites-section p {
+        font-size: 1em;
+    }
+
+    .actualite h3 {
+        font-size: 16px;
+    }
+
+    .footer-box h3 {
+        font-size: 18px;
+    }
+
+    .footer-box a {
+        font-size: 0.9em;
+    }
+}

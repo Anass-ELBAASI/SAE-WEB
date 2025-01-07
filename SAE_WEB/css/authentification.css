@@ -1,0 +1,16 @@
+body{
+    background: linear-gradient(to bottom right, mediumpurple,peachpuff);
+}
+
+
+.form-container {
+    display: none;
+}
+.form-container.active {
+    display: block;
+}
+.form-container{
+    margin : 10em;
+}
+
+

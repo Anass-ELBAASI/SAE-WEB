@@ -1,0 +1,201 @@
+html{
+    background : linear-gradient(to bottom right, mediumpurple, peachpuff);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+.filter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+/* Mise en page des documents */
+.documents {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+/* Style des cartes de documents */
+.doc-card {
+    position: relative;
+    width: 220px;
+    height: 80px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+.doc-card:hover {
+    transform: scale(1.05);
+}
+
+.bg-blue { background-color: #4A90E2; }
+.bg-purple { background-color: #756B8C; }
+.bg-pink { background-color: #C5416A; }
+.bg-dark-blue { background-color: #325298; }
+
+.bg-blue:hover { background-color: #357ABD; }
+.bg-purple:hover { background-color: #5E4B7E; }
+.bg-pink:hover { background-color: #A93358; }
+.bg-dark-blue:hover { background-color: #253c70; }
+
+/* Responsive  */
+
+/* Ecran smartphone */
+@media (max-width: 767px) {
+    .documents {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .doc-card {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .section h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .documents {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .doc-card {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* ecran pc */
+@media (min-width: 1024px) {
+    .documents {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .doc-card {
+        width: 220px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .footer-box h3 {
+        font-size: 18px;
+    }
+
+    .footer-box a {
+        font-size: 0.9em;
+    }
+}

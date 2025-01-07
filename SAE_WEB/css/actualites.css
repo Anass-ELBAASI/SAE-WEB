@@ -1,0 +1,330 @@
+html{
+    background-color:#c0b4c4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+/* Corps de la page */
+body {
+    background : linear-gradient(to bottom right, mediumpurple, peachpuff);
+    margin: 0;
+    padding: 0;
+}
+
+/* Grille d'actualités */
+.actualites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    width: 80%;
+    justify-items: center;
+}
+
+.box {
+    width: 250px;
+    height: 300px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.pagination a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #6da3bd;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+/* Style des boutons */
+.filters button {
+    background-color: #6da3bd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+}
+
+.filters button:hover {
+    background-color: #5a92ab;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.filters button:active {
+    background-color: #4e8099;
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.filters button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(109, 163, 189, 0.4);
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #333;
+}
+
+h1.titre-actualites {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style du popup en plein écran */
+.popup-bulle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.popup-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.popup-bulle .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.popup-button:hover {
+    background-color: #77bcf3;
+}
+
+.popup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #77bcf3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+/* Responsiveness */
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+    .actualites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box {
+        width: 200px;
+        height: auto;
+    }
+
+    h1.titre-actualites {
+        font-size: 20px;
+    }
+
+    .popup-content {
+        max-width: 90%;
+    }
+
+    .filters button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Pour les smartphones */
+@media (max-width: 480px) {
+    .actualites-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    h1.titre-actualites {
+        font-size: 18px;
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .filters button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .pagination a {
+        margin: 0 5px;
+    }
+
+    .popup-bulle .close-btn {
+        font-size: 20px;
+    }
+}
+
+/* Bouton pour défiler vers le haut */
+#scrollUpBtn {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #6da3bd;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Bouton pour défiler vers le bas */
+#scrollDownBtn {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #6da3bd;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Effet au survol */
+#scrollUpBtn:hover,
+#scrollDownBtn:hover {
+    background-color: #5a92ab;
+}

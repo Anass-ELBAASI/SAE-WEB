@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualités</title>
+    <link rel="stylesheet" href="../css/actualites.css">
+    <script src="../js/actualites.js"></script>
+    <script src="../js/loadNavBar.js" type="module"></script>
+    <script src="../js/loadfooter.js" type="module"></script>
+</head>
+<body>
+<div id="navbar-container"></div>
+
+<button onclick="scrollToBottom()" id="scrollDownBtn" title="Bas de page">↓</button>
+<button onclick="scrollToTop()" id="scrollUpBtn" title="Haut de page">↑</button>
+
+
+    <h1 class="titre-actualites">Nos dernières actualités</h1>
+
+    <!-- Boutons -->
+<div class="filters">
+    <button > <a href="./ancienArticle.html"> Anciens articles </a></button>
+</div>
+
+    <!-- Grille d'actualités -->
+    <section class="actualites-grid">
+
+
+
+        <a href="https://docs.wixstatic.com/ugd/cdd428_cbf1bf82b5a84b908438d9f8b57e8ec1.pdf" target="_blank" onclick="showPopup(event); return false;">
+            <div class="box">
+                <p>Covid-19</p>
+                <p>Thermalisme</p>
+                <img src="../image/sectionActu/cure-covid.webp" alt="Cure covid">
+            </div>
+        </a>
+
+        <!-- Conteneur de la bulle d'information en plein écran -->
+        <div id="popup-bulle" class="popup-bulle">
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopup()">X</button>
+                <h2>Informations sur le Covid-19 et le thermalisme</h2>
+                <p>Le thermalisme offre des solutions de bien-être et de soin durant la pandémie de Covid-19. Voici des informations importantes pour les patients potentiels.</p>
+                <!-- Bouton "En savoir plus" -->
+                <a href="https://docs.wixstatic.com/ugd/cdd428_cbf1bf82b5a84b908438d9f8b57e8ec1.pdf" target="_blank" class="popup-button">En savoir plus</a>
+            </div>
+        </div>
+
+        <a href="https://docs.wixstatic.com/ugd/cdd428_36afe0c5927a4d788626d64be160ec2e.pdf">
+            <div class="box">
+                <p>Été 2019</p>
+                <p>Venez nous rencontrer</p>
+                <img src="../image/sectionActu/imageRecontre.png" alt="Rencontre">
+            </div>
+        </a>
+        <a href="https://docs.wixstatic.com/ugd/cdd428_2214779a39f04c9c931f4523816f5113.pdf">
+            <div class="box">
+                <p>Communiqué n° 1/2020</p>
+                <p>du 10 janvier</p>
+                <img src="../image/sectionActu/communique_1.png" alt="Communiqué 1">
+            </div>
+        </a>
+        <a href="https://docs.wixstatic.com/ugd/cdd428_0361341adad84039a93a1e10eeb297a3.pdf">
+            <div class="box">
+                <p>Communiqué n° 6/2019</p>
+                <p>du 6 octobre</p>
+                <img src="../image/sectionActu/communicationShema.png" alt="Communication Schéma">
+            </div>
+        </a>
+        <a href="https://docs.wixstatic.com/ugd/cdd428_2871717bcf1749aea02e1c43cea80450.pdf">
+            <div class="box">
+                <p>Résultats et conséquences</p>
+                <p>Conseil d'État</p>
+                <img src="../image/sectionActu/conseilEtat.png" alt="Conseil d'État">
+            </div>
+        </a>
+        <a href="https://docs.wixstatic.com/ugd/cdd428_1871086867b64d6b8b92a06eec64aeba.pdf">
+            <div class="box">
+                <p>La FFCM a saisi le</p>
+                <p>Conseil d'État</p>
+                <img src="../image/sectionActu/conseilEtat2.png" alt="Conseil d'État 2">
+            </div>
+        </a>
+        <a href="https://docs.wixstatic.com/ugd/cdd428_414256d8896b4e69a947f8c4053ef359.pdf">
+            <div class="box">
+                <p>Mont-Dore (63)</p>
+                <p>6ème Congrès National</p>
+                <img src="../image/sectionActu/congretNational.jpg" alt="Congrès National">
+            </div>
+        </a>
+        <a href="https://docs.wixstatic.com/ugd/cdd428_d659390e7c544bb9a31502543ad46d12.pdf">
+            <div class="box">
+                <p>Lettre ouverte de</p>
+                <p>France Assos santé</p>
+                <img src="../image/sectionActu/LettreOuverte.jpg" alt="Lettre ouverte">
+            </div>
+        </a>
+        <a href="https://docs.wixstatic.com/ugd/cdd428_1ea66eca13f047e8bbbbf9e96b3c0d31.pdf">
+            <div class="box">
+                <p>Réunion - 4 mai</p>
+                <img src="../image/sectionActu/invitation.png" alt="Invitation Réunion">
+            </div>
+        </a>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="./ancienArticle.html">Page précédente</a>
+        <span>1 ... 2 ... 3 ... 4</span>
+        <a href="./ancienArticle.html">Page suivante</a>
+    </div>
+
+<div id="footer-container"></div>
+</body>
+</html>
