@@ -17,9 +17,7 @@ if ($isLoggedIn) {
 } else {
     $role = false;
 }
-var_dump($_SESSION['email']);
-var_dump($role, $isLoggedIn);
-exit();
+
 ?>
 
 <!DOCTYPE html>
