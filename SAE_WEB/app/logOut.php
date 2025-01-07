@@ -1,3 +1,3 @@
 <?php
 session_destroy();
-header("location:page.php");
+header("location: ../public/page.php");

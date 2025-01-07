@@ -9,6 +9,7 @@ html{
 
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, mediumpurple, peachpuff);
 
 }
 
@@ -108,8 +109,8 @@ li {
     margin-top: 10px;
 }
 .left-band {
-    background-color: #b0d8d5;
-    color: #333;
+    background-color: transparent;
+    color: #000000;
     transform: translateX(-100%);
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
@@ -117,14 +118,13 @@ li {
     border-bottom-right-radius: 15px;
 }
 .right-band {
-    background-color: #d79eb7;
-    color: #333;
+    background-color: transparent;
+    color: #000000;
     transform: translateX(100%);
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-
 }
 .band .text {
     padding: 20px;
@@ -135,7 +135,7 @@ li {
     font-size: 24px;
 }
 .band:nth-child(3){
-    background-color: #3c8ab1;
+    background-color: transparent;
 }
 /* Animation */
 .show-left-band {
@@ -183,7 +183,7 @@ li {
         padding: 3em;
         border-radius: 2px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        font-family: 'Georgia', serif;
+        font-family: 'Helvetica', serif;
         font-size: 1rem;
         line-height: 1.6;
         text-align: justify;

@@ -6,6 +6,7 @@
     grid-template-columns: repeat(auto-fit, minmax(270px, auto));
     gap: 2.5rem;
     padding: 2rem;
+    margin-top:auto;
 }
 
 .footer-box {

@@ -39,7 +39,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $_SESSION['flash'][$code] = $message;
     $_SESSION['email'] = $_POST['email'];
-    $_SESSION['password'] = $_POST['password'];
 
     $direction = $_SERVER['HTTP_ORIGIN'];
     header("Location: ../public/page.php");
