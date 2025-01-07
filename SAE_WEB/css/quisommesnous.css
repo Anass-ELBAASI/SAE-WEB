@@ -1,0 +1,260 @@
+html{
+    background-color:#c0b4c4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.band {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: height 0.5s ease;
+    box-sizing: border-box;
+}
+.band p {
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 80%;
+}
+ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: disc;
+    text-align: left;
+}
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+}
+.band p, .band ul {
+    padding: 3em;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 auto;
+    width: 80%;
+
+}
+.text {
+    padding: 20px;
+    font-size: 18px;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+}
+.text ul {
+    margin-top: 10px;
+}
+.left-band {
+    background-color: #b0d8d5;
+    color: #333;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.right-band {
+    background-color: #d79eb7;
+    color: #333;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+.band .text {
+    padding: 20px;
+    font-size: 18px;
+}
+.band h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.band:nth-child(3){
+    background-color: #3c8ab1;
+}
+/* Animation */
+.show-left-band {
+    animation: slideInLeft 1s forwards;
+    opacity: 1;
+}
+.show-right-band {
+    animation: slideInRight 1s forwards;
+    opacity: 1;
+}
+
+.PDF {
+    display: flex;
+    align-self: center;
+
+}
+.PDF img{
+    width: 10em;
+}
+.PDF img:hover{
+    cursor: pointer;
+}
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    header, .content .text {
+        font-size: 1em;
+    }
+
+    .band .text {
+        font-size: 1em;
+    }
+    .band p, .band ul {
+        padding: 3em;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        font-family: 'Georgia', serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin: 0 auto;
+        width: 100%;
+
+    }
+}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    header .logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .band {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .band p, .band ul {
+        padding: 2em;
+        font-size: 0.9rem;
+        width: 90%;
+    }
+
+    .band h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .text {
+        font-size: 16px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .PDF img {
+        width: 8em;
+    }
+
+    .band .text {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .left-band, .right-band {
+        padding: 15px;
+        border-radius: 10px;
+    }
+}

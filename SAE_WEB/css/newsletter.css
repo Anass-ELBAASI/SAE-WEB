@@ -1,0 +1,177 @@
+html{
+    background-color:#c0b4c4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+/* FORMULAIRE */
+.box {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: 0;
+}
+
+.contact {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #C5416A;
+    border: 5px solid;
+}
+
+.A {
+    background-color: #756B8C;
+    position: absolute;
+    margin-bottom: 5%;
+    margin-left: 35%;
+    z-index: 1;
+}
+
+.contact-form {
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.A h1 {
+    font-weight: 500;
+    font-size: 2.5em;
+    margin-top: 3%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2%;
+    margin: 4% 0;
+    transition: 0.5s;
+
+    background-color: #c0b4c4;
+    color: black;
+    padding: 3%;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form-text:hover {
+    box-shadow: 0 0 10px 5px #C5416A;
+}
+
+.contact-form-btn {
+    margin-left: 65%;
+    margin-bottom: 3%;
+    padding: 2%;
+    border-radius: 8px;
+    width: 30%;
+    background-color: #C5416A;
+    color: white;
+    border: none;
+}
+
+.contact-form-btn:hover {
+    background-color: #A6344B;
+    transition: 0.5s;
+}
+/* Responsive*/
+@media (max-width: 768px) {
+    .box {
+        padding: 15px;
+    }
+
+    .contact h1 {
+        font-size: 20px;
+    }
+
+    .contact-form-text, .contact-form-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact h1 {
+        font-size: 18px;
+    }
+
+    .contact-form-btn {
+        padding: 10px;
+    }
+}
+/* Responsive: menu mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #756B8C;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
