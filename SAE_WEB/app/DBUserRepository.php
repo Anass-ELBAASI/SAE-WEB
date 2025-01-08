@@ -57,4 +57,10 @@ class DBUserRepository implements IUserRepository {
         }
         return false;
     }
+
+    public function hasUserSubmittedForm($userId) {
+        $stmt = $this->dbConnexion->prepare("SELECT COUNT(*) FROM formulaire WHERE idUser = :user_id");
+        $stmt->execute([':user_id' => $userId]);
+        return $stmt->fetchColumn() > 0; // Retourne true si une entrée existe, sinon false
+    }
 }

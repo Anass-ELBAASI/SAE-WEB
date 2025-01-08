@@ -1,7 +1,7 @@
 body{
     background: linear-gradient(to bottom right, mediumpurple,peachpuff);
+    height: 100vh;
 }
-
 
 .form-container {
     display: none;
@@ -9,8 +9,10 @@ body{
 .form-container.active {
     display: block;
 }
+
 .form-container{
-    margin : 10em;
+    margin-top:10em;
+    margin-bottom:19em;
 }
 
 

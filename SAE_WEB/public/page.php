@@ -6,6 +6,22 @@ require_once '../app/flash.php';
 
 messageFlash();
 
+use Romai\SaeWeb\BddConnect;
+use Romai\SaeWeb\DBUserRepository;
+require_once '../vendor/autoload.php';
+
+$bdd = new BddConnect();
+
+$pdo = $bdd->connexion();
+$trousseau = new DBUserRepository($pdo);
+
+$isLoggedIn = $trousseau->isUserLoggedIn();
+
+if ($isLoggedIn) {
+    $role = $trousseau->isUserAdmin($_SESSION['email']);
+} else {
+    $role = false;
+}
 
 ?>
 <!DOCTYPE html>
@@ -29,23 +45,12 @@ messageFlash();
     <script src="../js/page.js" type="module"></script>
     <script src="../js/loadfooter.js" type="module"></script>
     <script src="../js/scrollimage.js" type="module"></script>
+    <script src="../js/toggleForm.js" type="module"></script>
+    <script src="../js/loadNavBarSansImage.js" type="module"></script>
 </head>
 
-<header>
-    <h1><img src="../image/logo.png" alt="Logo FFCM"></h1>
-    <nav>
-        <ul>
-            <li><a href="accueil.html"> Acceuil</a></li>
-            <li><a href="actualites.html"> Actualités</a></li>
-            <li><a href="quisommesnous.html"> Qui Sommes Nous ?</a></li>
-            <li><a href="documents.html">Documents</a></li>
-            <li><a href="page.php">Votre Espace</a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
-<div id="navbar-container"></div>
+<header id="navbar-container"></header>
 <div class="container mt-5">
     <h2 class="text-center">Site sécurisé</h2>
 

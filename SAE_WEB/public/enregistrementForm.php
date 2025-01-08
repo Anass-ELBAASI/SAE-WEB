@@ -26,7 +26,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $code = "success";
     }
     catch(Exception $e) {
-        var_dump($_POST['qualite_vie_detail']);
         $retour = false;
         $message = "Enregistrement impossible : " . $e->getMessage();
         $code = "warning";
@@ -35,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $_SESSION['flash'][$code] = $message;
 
-    $direction = $_SERVER['HTTP_ORIGIN'];
-    header("Location: ../public/formulaire.html");
+
+    header("Location: ../public/accueil.php");
 
 }

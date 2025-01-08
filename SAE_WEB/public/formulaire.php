@@ -1,43 +1,41 @@
+<?php
+if(!session_id())
+    session_start();
+use Romai\SaeWeb\BddConnect;
+use Romai\SaeWeb\DBUserRepository;
+
+require_once '../vendor/autoload.php';
+$bdd = new BddConnect();
+
+$pdo = $bdd->connexion();
+$trousseau = new DBUserRepository($pdo);
+
+$isLoggedIn = $trousseau->isUserLoggedIn();
+
+if ($isLoggedIn) {
+    $role = $trousseau->isUserAdmin($_SESSION['email']);
+} else {
+    $role = false;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquête - Formulaire</title>
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/formulaire.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <script src="../js/loadfooter.js" type="module"></script>
+    <script src="../js/loadNavBarSansImage.js" type="module"></script>
 </head>
-<header>
-    <h1><img src="../image/logo.png" alt="Logo FFCM"></h1>
-    <nav>
-        <ul>
-            <li><a href="accueil.html"> Accueil</a></li>
-            <li><a href="actualites.html"> Actualités</a></li>
-            <li><a href="quisommesnous.html"> Qui Sommes Nous ?</a></li>
-            <li><a href="documents.html">Documents</a></li>
-            <li id="votreEspace"><a href="page.php">Votre Espace</a>
-                <ul class="sous-menu">
-                    <li><a href="#">Se connecter</a></li>
-                    <?php if ($trousseau->isUserLoggedIn()): ?>
-                    <div class="options-login">
-                        <p><?=htmlspecialchars($trousseau->findUserByEmail($_SESSION['email'])->getPrenom())?></p>
-                        <p><a href="../app/logOut.php">Se deconnecter</a></p></p>
-                    </div>
-                    <?php endif; ?>
-                    <?php if (!$trousseau->isUserLoggedIn()): ?>
-                    <div class="options-login">
-                        <p><a href="page.php">Se connecter</a> </p>
-                        <p><a href="page.php">Créer un compte</a></p>
-                    </div>
-                    <?php endif; ?>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
+
 <body>
-<div id="navbar-container"></div>
+<header id="navbar-container"></header>
+
 <div class="form-container">
 <h1>Enquête de l'association</h1>
 <form action="enregistrementForm.php" method="POST">
@@ -197,6 +195,7 @@
 
 
     <button type="submit">Soumettre</button>
+
 </form>
 </div>
 <div class="footer-container"></div>

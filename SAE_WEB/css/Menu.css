@@ -67,9 +67,9 @@ header nav ul li a {
 }
 
 .container .section img {
-    width: 150px; /* Largeur définie de l'image */
-    height: 150px; /* Hauteur définie de l'image */
-    object-fit: cover; /* Assure que l'image remplisse le conteneur sans déformation */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .section img {

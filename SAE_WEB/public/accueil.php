@@ -1,3 +1,11 @@
+<?php
+require_once '../app/flash.php';
+if(!session_id())
+    session_start();
+
+
+messageFlash();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +21,8 @@
     <script src="../js/loadNavBar.js" type="module"></script>
 </head>
 <body>
+<div> <?php
+    messageFlash();?> </div>
 <div id="navbar-container"></div>
 
 <div class="container">

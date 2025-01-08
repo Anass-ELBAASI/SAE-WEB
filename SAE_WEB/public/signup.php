@@ -22,7 +22,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $code = "success";
     }
     catch(Exception $e) {
-//        var_dump($_POST);
         $retour = false;
         $message = "Enregistrement impossible : " . $e->getMessage();
         $code = "warning";
@@ -31,8 +30,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $_SESSION['flash'][$code] = $message;
     $_SESSION['admin']= $_POST['email'];
-    unset($_SESSION['password']);
-    $direction = $_SERVER['HTTP_ORIGIN'];
+
     header("Location: ../public/page.php");
 
 }

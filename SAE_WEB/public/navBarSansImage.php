@@ -41,16 +41,12 @@ if ($isLoggedIn) {
             <li><a href="actualites.html">Actualités</a></li>
             <li><a href="quisommesnous.html">Qui Sommes Nous ?</a></li>
             <li><a href="documents.html">Documents</a></li>
-            <li id="votreEspace" ><a>Votre Espace</a>
+            <li id="votreEspace"><a href="page.php">Votre Espace</a>
                 <ul class="sous-menu">
                     <?php if ($isLoggedIn): ?>
                         <div class="options-login">
                             <p class="user-name"><?= htmlspecialchars($trousseau->findUserByEmail($_SESSION['email'])->getPrenom()) ?></p>
-                            <?php if (!$formSubmitted): ?>
-                                <p><a href="../public/formulaire.php">Accéder au formulaire</a></p>
-                            <?php else: ?>
-                                <p>Formulaire déjà rempli</p>
-                            <?php endif; ?>
+                            <p><a href="../public/formulaire.php">Accéder au formulaire</a></p>
                             <p><a href="../app/logOut.php">Se déconnecter</a></p>
                             <?php if ($role === true): ?> <!-- Si admin -->
                                 <p class="logout-btn"><a href="Graphique.php">Tableau de bord</a></p>
@@ -68,7 +64,6 @@ if ($isLoggedIn) {
     </nav>
 </header>
 
-<img id="scroll-image" src="../image/Q10.png" class="image-dessous-navbar">
 
 <body>
 </body>

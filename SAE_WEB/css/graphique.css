@@ -1,0 +1,121 @@
+html {
+    background: linear-gradient(to bottom right, mediumpurple, peachpuff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7e7095;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Graphique */
+
+#charts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les graphiques */
+}
+
+.chart {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+svg text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 14px; /* Ajustez selon vos besoins */
+    fill: #000; /* Couleur du texte, ajustable */
+    text-anchor: middle; /* Centrer le texte (optionnel) */
+}
+
+#respondentsTable h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px; /* Ajustez selon vos besoins */
+}
+
+/* Media Queries pour petits écrans */
+@media (max-width: 768px) {
+    svg {
+        width: 100%; /* Occupe toute la largeur */
+        max-width: 300px; /* Limite pour petits écrans */
+    }
+
+    .title {
+        font-size: calc(2vw + 10px); /* Taille légèrement plus grande sur petits écrans */
+    }
+
+    svg text {
+        font-size: calc(1vw + 5px); /* Ajuste la taille pour petits écrans */
+    }
+}
+
+/* Pour les écrans de 480px ou moins */
+@media (max-width: 480px) {
+    svg {
+        width: 100%; /* Occupe toute la largeur */
+        max-width: 200px; /* Réduit encore la taille pour s'adapter aux très petits écrans */
+        margin: 0 auto; /* Centre le graphique */
+    }
+
+    .title {
+        font-size: calc(4vw + 6px); /* Police plus grande pour rester lisible */
+        margin-bottom: 15px; /* Réduit l'espacement pour économiser de l'espace */
+    }
+
+    svg text {
+        font-size: calc(2vw + 3px); /* Texte adapté à la taille réduite du graphique */
+    }
+}
