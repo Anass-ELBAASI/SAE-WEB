@@ -1,0 +1,26 @@
+[
+  {
+    "idFormulaire": 1,
+    "idUser": 7,
+    "region": "Auvergne Rhône-Alpes",
+    "age": 18,
+    "lieuDeVie": "Dans la famille en permanence",
+    "adaptationCDAPH": "Oui",
+    "lieuVoulu": 1,
+    "activite": "Scolarité en milieu ordinaire",
+    "qualiteDeVie": "Tout va bien,Restriction de la vie sociale",
+    "besoinIntervention": "Personne totalement autonome"
+  },
+  {
+    "idFormulaire": 4,
+    "idUser": 9,
+    "region": "Ile-de-France",
+    "age": 19,
+    "lieuDeVie": "Dans la famille en permanence",
+    "adaptationCDAPH": "Pas d'orientation CDAPH",
+    "lieuVoulu": 1,
+    "activite": "Études supérieures",
+    "qualiteDeVie": "Tout va bien,Fatigue et épuisement",
+    "besoinIntervention": "Personne totalement autonome"
+  }
+]

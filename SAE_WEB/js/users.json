@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "email": "test",
+    "nom": "test",
+    "prenom": "tet",
+    "mdp": "test",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 2,
+    "email": "azer@azer.com",
+    "nom": "test",
+    "prenom": "test",
+    "mdp": "123",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 3,
+    "email": "rfhzehfize@gmail.com",
+    "nom": "Doe",
+    "prenom": "John",
+    "mdp": "azerty",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 4,
+    "email": "lewade4430@togito.com",
+    "nom": "Doe",
+    "prenom": "John",
+    "mdp": "$2y$10$T5K37uCdfzA/YzXnJ6eptutvoPQcQ236mAU/C0We/cVCwKoPALIz.",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 5,
+    "email": "spt@spt.com",
+    "nom": "az",
+    "prenom": "az",
+    "mdp": "$2y$10$ZyLLHxKskgtt6w84B8RUQ.EIltjCxUlEoMafaSIr0EV6vrBmEJ48.",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 6,
+    "email": "rr@rr.com",
+    "nom": "rrr",
+    "prenom": "rrr",
+    "mdp": "$2y$10$WxiORTsj397/ExquUNwNuOF4xaYKYfCTPz8T/L8gZ/lMLMlqAloGW",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 7,
+    "email": "johndoe@gmail.com",
+    "nom": "Doe",
+    "prenom": "John",
+    "mdp": "$2y$10$PIsaVzPOYKwWL0j.0SqzJ.A29jhoTJNcTg2lLhGUK2QRHhQv8sHa.",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 8,
+    "email": "aled@aled.com",
+    "nom": "aled",
+    "prenom": "aled",
+    "mdp": "$2y$10$qpoL5t7yVHSdSx8aWgMmxOCHgyX5O1Cyc/fEe4lQrakvtJcw9sXha",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 9,
+    "email": "exa@gmail.com",
+    "nom": "exa",
+    "prenom": "exa",
+    "mdp": "$2y$10$6oCtMPs/mjZHJbtWnnI.BODK4ad.57YeY2nXTusziuoo6v3AGu7nS",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 10,
+    "email": "celthans@gmail.com",
+    "nom": "celthans",
+    "prenom": "dezan",
+    "mdp": "$2y$10$qS0Lf/OJd8X2VSn7ZHE70uTs3WccOcGB48LtNsynt1/mPWhi9oPO.",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 11,
+    "email": "qsd@qsd.com",
+    "nom": "qsd",
+    "prenom": "qsd",
+    "mdp": "$2y$10$mwtBUU4kLr1RCEnLk8Pj0.TbgslbXAFqxD1zBUKZYEOZobzUDWRQu",
+    "estAdherent": 1,
+    "estAdmin": 0
+  },
+  {
+    "id": 12,
+    "email": "bj@gmail.com",
+    "nom": "bonjour",
+    "prenom": "bonjour",
+    "mdp": "$2y$10$Fegsq0dPYcFO6Rp5TlUPl.34awTqDIMvdheHa.BMshK4xdq4TVO.m",
+    "estAdherent": 1,
+    "estAdmin": 0
+  }
+]
