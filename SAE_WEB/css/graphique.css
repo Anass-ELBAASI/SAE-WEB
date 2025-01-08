@@ -86,6 +86,30 @@ svg text {
     font-size: 20px; /* Ajustez selon vos besoins */
 }
 
+.lieu-de-vie-table {
+    width: 80%; /* Remplacez par une autre valeur si nécessaire */
+    max-width: 800px; /* Définir une largeur maximale */
+    border-collapse: collapse;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 20px;
+    margin-left: auto; /* Centrer le tableau */
+    margin-right: auto; /* Centrer le tableau */
+}
+
+.lieu-de-vie-table th,
+.lieu-de-vie-table td {
+    border: 1px solid #6a3030;
+    padding: 8px;
+    text-align: center;
+}
+
+.lieu-de-vie-table th {
+    background-color: #5c2e2e;
+    font-weight: bold;
+}
+
+
+
 /* Media Queries pour petits écrans */
 @media (max-width: 768px) {
     svg {

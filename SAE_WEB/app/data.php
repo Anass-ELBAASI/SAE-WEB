@@ -17,7 +17,7 @@ foreach ($tables as $table) {
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Convertir les données en format JSON
-        $jsonData = json_encode($results, JSON_PRETTY_PRINT,  JSON_UNESCAPED_UNICODE);
+        $jsonData = json_encode($results, JSON_PRETTY_PRINT);
 
         // Sauvegarder les données dans un fichier JSON
         file_put_contents("../js/$table.json", $jsonData);

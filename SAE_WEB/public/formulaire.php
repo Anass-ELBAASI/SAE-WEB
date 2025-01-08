@@ -120,12 +120,12 @@ if ($isLoggedIn) {
             <option value="Scolarité en dispositif spécialisé de l'Éducation Nationale">
                 Scolarité en dispositif spécialisé de l'Éducation National
             </option>
-            <option value="Instruction en Famille">Instruction en Famille (2.28%)</option>
+            <option value="Instruction en Famille">Instruction en Famille</option>
             <option value="Scolarité dans un établissement médico-social (IME, IMPRO…)">
                 Scolarité dans un établissement médico-social (IME, IMPRO…)
             </option>
             <option value="Formation professionnelle">Formation professionnelle</option>
-            <option value="Études supérieures">Études supérieures (5.45%)</option>
+            <option value="Études supérieures">Études supérieures</option>
             <option value="Activité professionnelle en milieu ordinaire">
                 Activité professionnelle en milieu ordinaire
             </option>

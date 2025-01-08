@@ -1,4 +1,3 @@
-
 // Charger les données JSON
 Promise.all([
     d3.json('../js/formulaire.json'),
@@ -15,7 +14,7 @@ Promise.all([
     // 2. Histogramme des Âges
     createHistogram(
         "#ageHistogram",
-        formulaireData.map(d => d.age),
+        formulaireData.map(d => d.age).sort((a, b) => a - b),
         "Répartition des âges"
     );
 
@@ -23,21 +22,55 @@ Promise.all([
     createRespondentsTable(
         "#respondentsTable",
         formulaireData.length,
-        "Nombre total de répondants"
-    );
-
-    // 4. Pourcentage par Région
-    createRegionChart(
-        "#regionPercentageChart",
-        formulaireData.map(d => d.region),
-        "Répartition par région"
+        ""
     );
 
     // 5. Camembert pour correspondance lieu voulu / lieu actuel
     createPieChart(
         "#lieuMatchChart",
-        formulaireData.map(d => d.lieuVoulu === 1 && d.lieuDeVie ? "Correspond" : "Non Correspond"),
+        formulaireData.map(d => d.lieuVoulu == 1 && d.lieuDeVie ? "Correspond" : "Non Correspond"),
         "Correspondance entre lieu voulu et lieu actuel"
+    );
+
+    // 6. Histogramme qualité de vie
+    createHistogram(
+        "#qualiteDeVieChart",
+        formulaireData.flatMap(d => d.qualiteDeVie.split(',')),
+        "Répartition des réponses sur la qualité de vie"
+    );
+
+    // 7. Camembert pour Adaptation CDAPH
+    createPieChart(
+        "#adaptationCDAPHChart",
+        formulaireData.map(d => d.adaptationCDAPH),
+        "Répartition des adaptations CDAPH"
+    );
+
+    // 8. Tableau Lieu de Vie
+    createLieuDeVieTable(
+        "#lieuDeVieTable",
+        formulaireData.map(d => d.lieuDeVie),
+        "Tableau des lieux de vie"
+    );
+
+    // 8. Tableau Lieu de Vie
+    createLieuDeVieTable(
+        "#AHHHH",
+        formulaireData.map(d => d.region),
+        "Qui a repondu ?"
+    );
+
+    // 9. Tableau de l'orientation CDAPH
+    createPieChart(
+        "#CDAPH",
+        formulaireData.map(d => d.adaptationCDAPH),
+        "Orientation CDAPH des habitations"
+    );
+    // 10. Tableau Activités pro ou scolaires
+    createLieuDeVieTable(
+        "#OHHHH",
+        formulaireData.map(d => d.activite),
+        "Activité ?"
     );
 });
 
@@ -46,7 +79,7 @@ function createPieChart(selector, data, title) {
     const width = 400, height = 400, radius = Math.min(width, height) / 2;
 
     const counts = Array.from(d3.rollup(data, v => v.length, d => d), ([key, value]) => ({ key, value }));
-    const total = d3.sum(counts, d => d.value); // Calcul du total pour les pourcentages
+    const total = counts.reduce((sum, d) => sum + d.value, 0);
     const color = d3.scaleOrdinal([
         "#4A90E2", // blue
         "#75688C", // purple
@@ -67,17 +100,15 @@ function createPieChart(selector, data, title) {
         .attr("d", arc)
         .attr("fill", d => color(d.data.key));
 
+    // Calculer la taille de la police en fonction du nombre de segments
+    const fontSize = counts.length > 5 ? 10 : 12;  // Si plus de 5 segments, réduire la taille de la police
+
     svg.selectAll("text")
         .data(pie(counts))
         .enter().append("text")
         .attr("transform", d => `translate(${arc.centroid(d)})`)
-        .style("text-anchor", "middle")
-        .style("font-size", "12px")
-        .style("fill", "black")
-        .text(d => {
-            const percentage = ((d.data.value / total) * 100).toFixed(1); // Calcul du pourcentage
-            return `${d.data.key} (${percentage}%)`; // Ajout du texte avec pourcentage
-        });
+        .style("font-size", `${fontSize}px`) // Appliquer la taille de la police
+        .text(d => `${d.data.key} (${((d.data.value / total) * 100).toFixed(1)}%)`);
 
     d3.select(selector).insert("h2", "svg").text(title).attr("class", "title");
 
@@ -85,50 +116,41 @@ function createPieChart(selector, data, title) {
     addSegmentInteractions(paths);
 }
 
-
 // Fonction pour créer un histogramme
 function createHistogram(selector, data, title) {
-    const width = 600, height = 400, margin = { top: 20, right: 30, bottom: 40, left: 40 };
+    const width = 600, height = 400, margin = { top: 20, right: 30, bottom: 100, left: 60 }; // Marges élargies
 
     const svg = d3.select(selector).append("svg")
         .attr("width", width).attr("height", height);
 
-    const x = d3.scaleLinear().domain([d3.min(data), d3.max(data)]).range([margin.left, width - margin.right]);
-    const bins = d3.histogram().domain(x.domain()).thresholds(x.ticks(10))(data);
-    const y = d3.scaleLinear().domain([0, d3.max(bins, d => d.length)]).range([height - margin.bottom, margin.top]);
+    const x = d3.scaleBand().domain(data).range([margin.left, width - margin.right]).padding(0.1);
+    const counts = Array.from(d3.rollup(data, v => v.length, d => d), ([key, value]) => ({ key, value }));
+    const y = d3.scaleLinear().domain([0, d3.max(counts, d => d.value)]).range([height - margin.bottom, margin.top]);
 
-    const bars = svg.append("g")
+    svg.append("g")
         .selectAll("rect")
-        .data(bins)
+        .data(counts)
         .enter().append("rect")
-        .attr("x", d => x(d.x0))
-        .attr("y", d => y(d.length))
-        .attr("width", d => x(d.x1) - x(d.x0) - 1)
-        .attr("height", d => y(0) - y(d.length))
-        .attr("fill", "#4A90E2"); // Default color
+        .attr("x", d => x(d.key))
+        .attr("y", d => y(d.value))
+        .attr("width", x.bandwidth())
+        .attr("height", d => y(0) - y(d.value))
+        .attr("fill", "#4A90E2");
 
-    svg.append("g").call(d3.axisBottom(x)).attr("transform", `translate(0,${height - margin.bottom})`);
-    svg.append("g").call(d3.axisLeft(y)).attr("transform", `translate(${margin.left},0)`);
+    svg.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom })`)
+        .call(d3.axisBottom(x).tickSize(0))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)") // Réduire l'angle de rotation
+        .style("text-anchor", "end")
+        .style("font-size", "10px") // Réduire la taille de la police
+        .attr("dy", "0.35em"); // Ajuste la position verticale
+
+    svg.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+.call(d3.axisLeft(y));
 
     d3.select(selector).insert("h2", "svg").text(title).attr("class", "title");
-
-    // Ajouter les interactions (agrandir les barres au survol)
-    bars.on("mouseover", function () {
-        d3.select(this)
-            .transition()
-            .duration(200)
-            .attr("fill", "#357ABD")
-            .attr("height", d => y(0) - y(d.length) + 10)
-            .attr("y", d => y(d.length) - 10);
-    })
-        .on("mouseout", function () {
-            d3.select(this)
-                .transition()
-                .duration(200)
-                .attr("fill", "#4A90E2")
-                .attr("height", d => y(0) - y(d.length))
-                .attr("y", d => y(d.length));
-        });
 }
 
 // Fonction pour créer un tableau des répondants
@@ -136,6 +158,33 @@ function createRespondentsTable(selector, count, title) {
     const container = d3.select(selector).append("div");
     container.append("h2").text(title);
     container.append("p").text(`Nombre de répondants : ${count}`);
+}
+
+// Fonction pour créer un tableau Lieu de Vie
+function createLieuDeVieTable(selector, data, title) {
+    const counts = Array.from(d3.rollup(data, v => v.length, d => d), ([key, value]) => ({ key, value }));
+    const total = counts.reduce((sum, d) => sum + d.value, 0);
+
+    const container = d3.select(selector).append("div");
+    container.append("h2").text(title);
+
+    const table = container.append("table").attr("class", "lieu-de-vie-table");
+    const thead = table.append("thead");
+    const tbody = table.append("tbody");
+
+    thead.append("tr")
+        .selectAll("th")
+        .data(["Lieu de Vie", "Nombre", "Pourcentage"])
+        .enter().append("th")
+        .text(d => d);
+
+    tbody.selectAll("tr")
+        .data(counts)
+        .enter().append("tr")
+        .selectAll("td")
+        .data(d => [d.key, d.value, `${((d.value / total) * 100).toFixed(1)}%`])
+        .enter().append("td")
+        .text(d => d);
 }
 
 // Fonction pour créer un graphique en barres empilées

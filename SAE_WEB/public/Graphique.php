@@ -15,13 +15,17 @@
 <body>
 
 <header id="navbar-container"> </header>
-<br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/>
 <div id="charts">
-  <div id="respondentsTable" class="chart"></div>
-  <div id="lieuDeVieChart" class="chart"></div>
-  <div id="ageHistogram" class="chart"></div>
-  <div id="regionPercentageChart" class="chart"></div>
-  <div id="lieuMatchChart" class="chart"></div>
+    <div id="respondentsTable" class="chart"></div>
+    <div id="lieuDeVieChart" class="chart"></div>
+    <div id="ageHistogram" class="chart"></div>
+    <div id="regionPercentageChart" class="chart"></div>
+    <div id="qualiteDeVieChart" class="chart"></div>
+    <div id="lieuDeVieTable" class="chart"></div>
+    <div id="AHHHH" class="chart"></div>
+    <div id="CDAPH" class="chart"></div>
+    <div id="OHHHH" class="chart"></div>
 </div>
 </body>
 </html>

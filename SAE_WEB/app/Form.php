@@ -8,7 +8,7 @@ class Form
 
     public function getBesoinIntervention(): string {return $this->besoinIntervention; }
     public function getActivite(): string{ return $this->activite; }
-    public function isLieuVoulu(): bool{ return $this->lieuVoulu; }
+    public function isLieuVoulu(): bool{ return ($_POST['choix_vie'] === "Oui"); }
     public function getAdaptationCDAPH(): string{ return $this->adaptationCDAPH; }
     public function getLieuVie(): string { return $this->lieuVie; }
     public function getAge(): int { return $this->age; }
