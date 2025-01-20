@@ -9,7 +9,8 @@ class DBUserRepository implements IUserRepository {
     public function saveUser(User $user) : bool {
 
         $stmt = $this->dbConnexion->prepare(
-            "INSERT INTO users (email,nom,prenom,mdp,estAdherent,estAdmin) VALUES (:email, :nom, :prenom, :mdp, :estAdherant, :estAdmin)"
+            "INSERT INTO users (email,nom,prenom,mdp,estAdherent,estAdmin) 
+                    VALUES (:email, :nom, :prenom, :mdp, :estAdherant, :estAdmin)"
         );
         return $stmt->execute(array(
             'email' => $user->getEmail(),

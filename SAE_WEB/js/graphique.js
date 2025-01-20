@@ -81,10 +81,13 @@ function createPieChart(selector, data, title) {
     const counts = Array.from(d3.rollup(data, v => v.length, d => d), ([key, value]) => ({ key, value }));
     const total = counts.reduce((sum, d) => sum + d.value, 0);
     const color = d3.scaleOrdinal([
-        "#4A90E2", // blue
+        "green", // blue
         "#75688C", // purple
         "#C5416A", // pink
-        "#325298"  // dark-blue
+        "#325298", // dark-blue
+        "pink",
+        "grey",
+        "red"
     ]);
     const pie = d3.pie().value(d => d.value);
     const arc = d3.arc().innerRadius(0).outerRadius(radius);

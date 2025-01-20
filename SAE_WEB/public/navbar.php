@@ -49,7 +49,7 @@ if ($isLoggedIn) {
                             <?php if (!$formSubmitted): ?>
                                 <p><a href="../public/formulaire.php">Accéder au formulaire</a></p>
                             <?php else: ?>
-                                <p>Formulaire déjà rempli</p>
+                                <p>Formulaire rempli</p>
                             <?php endif; ?>
                             <p><a href="../app/logOut.php">Se déconnecter</a></p>
                             <?php if ($role === true): ?> <!-- Si admin -->

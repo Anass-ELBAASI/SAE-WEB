@@ -60,6 +60,7 @@ header{
     resize: vertical;
 }
 
+
 .form-container button {
     display: block;
     width: 100%;
@@ -72,6 +73,15 @@ header{
     cursor: pointer;
     margin-top: 10px;
 }
+
+#auth-form .form-label {
+    font-size: 0.875rem;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+
 
 /* Styles pour les groupes de cases à cocher */
 .checkbox-group {

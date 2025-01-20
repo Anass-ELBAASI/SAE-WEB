@@ -45,7 +45,6 @@ if ($isLoggedIn) {
     <script src="../js/page.js" type="module"></script>
     <script src="../js/loadfooter.js" type="module"></script>
     <script src="../js/scrollimage.js" type="module"></script>
-    <script src="../js/toggleForm.js" type="module"></script>
     <script src="../js/loadNavBarSansImage.js" type="module"></script>
 </head>
 
