@@ -25,35 +25,35 @@ Promise.all([
         ""
     );
 
-    // 5. Camembert pour correspondance lieu voulu / lieu actuel
+    // 4. Camembert pour correspondance lieu voulu / lieu actuel
     createPieChart(
         "#lieuMatchChart",
         formulaireData.map(d => d.lieuVoulu == 1 && d.lieuDeVie ? "Correspond" : "Non Correspond"),
         "Correspondance entre lieu voulu et lieu actuel"
     );
 
-    // 6. Histogramme qualité de vie
+    // 5. Histogramme qualité de vie
     createHistogram(
         "#qualiteDeVieChart",
         formulaireData.flatMap(d => d.qualiteDeVie.split(',')),
         "Répartition des réponses sur la qualité de vie"
     );
 
-    // 7. Camembert pour Adaptation CDAPH
+    // 6. Camembert pour Adaptation CDAPH
     createPieChart(
         "#adaptationCDAPHChart",
         formulaireData.map(d => d.adaptationCDAPH),
         "Répartition des adaptations CDAPH"
     );
 
-    // 8. Tableau Lieu de Vie
+    // 7. Tableau Lieu de Vie
     createLieuDeVieTable(
         "#lieuDeVieTable",
         formulaireData.map(d => d.lieuDeVie),
         "Tableau des lieux de vie"
     );
 
-    // 8. Tableau Lieu de Vie
+    // 8. Tableau Qui a repondu
     createLieuDeVieTable(
         "#AHHHH",
         formulaireData.map(d => d.region),
