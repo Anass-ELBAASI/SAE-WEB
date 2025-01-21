@@ -8,7 +8,6 @@ use Romai\SaeWeb\BddConnect;
 
 require_once '../vendor/autoload.php';
 
-
 $bdd = new BddConnect();
 
 $pdo = $bdd->connexion();
@@ -18,17 +17,19 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         $retour = $auth->authenticate($_POST['email'], $_POST['password']);
-
-        $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
-        $stmt->execute([$_POST['email']]);
-        $id = $stmt->fetchColumn();
-
+        if ($retour){
+            $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
+            $stmt->execute([$_POST['email']]);
+            $id = $stmt->fetchColumn();
+        }
         if ($id) {
             $_SESSION['user_id'] = $id;
+            $_SESSION['email'] = $_POST['email'];
+            $message = "Authentification réussie";
+            $code = "success";
         }
 
-        $message = "Authentification réussie";
-        $code = "success";
+
     }
     catch(Exception $e) {
         $retour = false;
@@ -38,8 +39,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     $_SESSION['flash'][$code] = $message;
-    $_SESSION['email'] = $_POST['email'];
 
-    header("Location: ../public/accueil.php");
 
+    if (isset($retour) && $retour) {
+        header("Location: ../public/accueil.php");
+    } else {
+        header("Location: ../public/page.php");
+    }
+    exit();
 }
